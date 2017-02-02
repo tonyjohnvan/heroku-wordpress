@@ -1,5 +1,7 @@
-# heroku-wordpress
-This project can help you directly deploy a newer version of WordPress on Heroku environment. It also has the Woocommerce plugin installed as well, which is the biggest opensource e-commerce CMS over the world. With the minimal configuration needed to get everything up online! 
+# WordPress on Heroku
+This project can help you directly deploy a newer version of WordPress on Heroku environment. It also has the Woocommerce plugin installed as well, which is the biggest open source e-commerce CMS over the world. 
+
+This repo uses latest version of WordPress and the minimal configuration needed to get everything up online on Heroku in 3 minutes! 
 
 *as for now this repo uses WordPress 4.7.2 and Woocommerce 2.6.13*
 
@@ -24,8 +26,8 @@ heroku create
 heroku addons:add cleardb
 heroku addons:add sendgrid
 ```
-#### Step 4: Run this commands to setup heroku server environment vars (much safer than just write them in your code):
-And then set the WordPress Keys with Environment variables:(you can use [this WordPress Official API](https://api.wordpress.org/secret-key/1.1/salt/) to generate KEYs)
+#### Step 4: Run this commands to setup heroku server environment vars 
+it's much safer than just write them in your code, and you can use [this WordPress Official API](https://api.wordpress.org/secret-key/1.1/salt/) to generate the values
 ```
 heroku config:set AUTH_KEY = 'REPLEACE_WITH_YOURS'
 heroku config:set SECURE_AUTH_KEY = 'REPLEACE_WITH_YOURS'
@@ -67,7 +69,7 @@ git push heroku master
 heroku open
 ```
 
-Then goto your wordpress server and you'll see the plugins and theme waiting to be activated in the admin panel.
+Then go to your WordPress server and you'll see the plugins and theme waiting to be activated in the admin panel.
 
 
 **Feel Free to Star if this really helps you  =)**
