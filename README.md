@@ -5,16 +5,16 @@ This project can help you directly deploy a newer version of WordPress on Heroku
 
 ## 3 Minutes Installation
 **Just open the terminal and you're ready to go!**
-##### Step 1: Clone this repo to your local:
+#### Step 1: Clone this repo to your local:
 ```
 git clone https://github.com/tonyjohnvan/heroku-wordpress.git
 cd heroku-wordpress
 ```
-##### Step 2: Run this command to generate the composer.lock:
+#### Step 2: Run this command to generate the composer.lock:
 ```
 composer update --ignore-platform-reqs
 ```
-##### Step 3: Run this commands to prepare the heroku server:
+#### Step 3: Run this commands to prepare the heroku server:
 ```
 heroku login
 ```
@@ -24,7 +24,7 @@ heroku create
 heroku addons:add cleardb
 heroku addons:add sendgrid
 ```
-##### Step 4: Run this commands to setup heroku server environment vars (much safer than just write them in your code):
+#### Step 4: Run this commands to setup heroku server environment vars (much safer than just write them in your code):
 And then set the WordPress Keys with Environment variables:(you can use [this WordPress Official API](https://api.wordpress.org/secret-key/1.1/salt/) to generate KEYs)
 ```
 heroku config:set AUTH_KEY = 'REPLEACE_WITH_YOURS'
@@ -36,7 +36,7 @@ heroku config:set SECURE_AUTH_SALT = 'REPLEACE_WITH_YOURS'
 heroku config:set LOGGED_IN_SALT = 'REPLEACE_WITH_YOURS'
 heroku config:set NONCE_SALT = 'REPLEACE_WITH_YOURS'
 ```
-##### Step 5: **Final step** - Deploy the Application!
+#### Step 5: **Final step** - Deploy the Application!
 ```
 git add .
 git commit -am "initial push"
@@ -50,7 +50,7 @@ heroku config:set DATABASE_URL='mysql://USERNAME:PASSWORD@DB_HOST_NAME/DB_NAME'
 ```
 **and heroku and wordpress will take care of it.**
 
-### Add Plugins and Themes
+## Add Plugins and Themes
 
 if you wish to add more themes and plugins to your wordpress service, remember it **cannot** be added through the plugin search within the wordpress, **you have to add it manually** in your wordpress file system and push it to heroku:
 
@@ -69,4 +69,5 @@ heroku open
 
 Then goto your wordpress server and you'll see the plugins and theme waiting to be activated in the admin panel.
 
-Feel Free to Star if this really helps you  =)
+
+**Feel Free to Star if this really helps you  =)**
